@@ -1,0 +1,55 @@
+usage of loaders inside webpack.config.js
+{
+    "entry" : ...
+    "output: {
+        "filename" :...
+        "path" : ...
+    },
+
+    // loaders example
+    module: {
+        rules: [
+			{
+				test: /\.css$/i,
+				use: [ 'style-loader', 'css-loader' ]
+			}
+		]
+    }
+}
+
+// loaders that can be used for
+
+for Styling  :
+    "css-loader": "^3.4.0",
+		"node-sass": "^4.13.0",
+		"sass-loader": "^8.0.0",
+		"style-loader": "^1.0.2",
+
+
+for cache bursting : filename.[contentHash].XX
+        output: {
+		filename: 'app.bundle.[contentHash].js',
+		path: path.resolve(__dirname, 'dist')
+	},
+
+for HTML:
+    HtmlWebpackPlugin  - npm install --save-dev html-webpack-plugin
+    //plugins
+	plugins: [
+		new HtmlWebpackPlugin({
+			template: './index.html'
+		})
+	]
+
+for production and dev version merge :
+webpack.common.js
+webpack.dev.js
+webpack.prod.js
+    npm i -D webpack-merge
+    npm i -D webpack-dev-server
+webpack dev server
+
+
+HTML LOADER and FILE LOADER
+
+clean webpack plugin

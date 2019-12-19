@@ -1,0 +1,14 @@
+// import some lib like normalize.css and below write u r app css
+// === example
+//@import "normalize.scss";
+
+// @import sass provided directive to import other scss files or node modules by prepending ~<nodemodule-name>/<optional-path>
+// === example
+//@import "~bootstrap/scss/bootstrap";
+
+// your app css starts here
+$body-color: red;
+
+body {
+	background: $body-color;
+}
