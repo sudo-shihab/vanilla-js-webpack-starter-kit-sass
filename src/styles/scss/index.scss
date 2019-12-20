@@ -7,9 +7,8 @@
 //@import "~bootstrap/scss/bootstrap";
 
 // your app css starts here
-$body-color: black;
+$body-color: #eee;
 
 body {
-	background: $body-color;
-	color: #eee;
+	color: $body-color;
 }
