@@ -59,3 +59,21 @@ split entry in webpack.common.js
 use splitchunks in optimization part provided by webpack 4
 
 BundleAnalyzerPlugin
+
+Extract DOM injected css to seprate file with mini-css-extract-plugin
+
+MiniCssExtractPlugin
+
+
+finally miniize html
+new HtmlWebpackPlugin({
+			template: './src/index.html',
+			minify: {
+				removeAttributeQuotes: true,
+				removeComments: true,
+				collapseWhitespace: true
+			}
+		})
+
+		
+		TODO : ADD BABEl TRANSPILER into this webpack
