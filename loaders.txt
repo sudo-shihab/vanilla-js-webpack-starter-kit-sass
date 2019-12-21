@@ -53,3 +53,9 @@ webpack dev server
 HTML LOADER and FILE LOADER
 
 clean webpack plugin
+
+split entry in webpack.common.js 
+
+use splitchunks in optimization part provided by webpack 4
+
+BundleAnalyzerPlugin

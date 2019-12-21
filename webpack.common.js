@@ -1,10 +1,8 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-	entry: {
-		vendor: './src/vendor.js',
-		main: './src/index.js'
-	},
+	entry: './src/index.js',
+
 	//loaders
 	module: {
 		rules: [
@@ -50,5 +48,17 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			template: './src/index.html'
 		})
-	]
+	],
+	// chunks
+	optimization: {
+		splitChunks: {
+			cacheGroups: {
+				vendors: {
+					test: /[\\/]node_modules[\\/]/, // this is what you are looking for
+					name: 'vendor',
+					chunks: 'all'
+				}
+			}
+		}
+	}
 };

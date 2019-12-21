@@ -1,6 +1,7 @@
 import { AlertServiceComponent } from './alert-service.js';
 import { AddServiceComponent } from './add-service.js';
-import { axios } from '../vendor';
+import axios from 'axios';
+
 axios
 	.get('https://jsonplaceholder.typicode.com/todos/1')
 	.then(function(response) {
