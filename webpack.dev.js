@@ -5,7 +5,7 @@ const merge = require('webpack-merge');
 module.exports = merge(webpackCommon, {
 	mode: 'development',
 	output: {
-		filename: 'app.bundle.js',
+		filename: '[name].js',
 		path: path.resolve(__dirname, 'dist')
 	}
 });
