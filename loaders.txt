@@ -76,4 +76,8 @@ new HtmlWebpackPlugin({
 		})
 
 		
-		TODO : ADD BABEl TRANSPILER into this webpack
+ADDED BABEl TRANSPILER into this webpack
+
+AFTER ADDING BABEL-loADER , Babel-polyfill we saw a huge icreasse in the file size of vendor.js , need to adress this 
+
+Try to add Babel 7 into webpack instaed of current babel6 , with new plugin like - Proposal Optional Chaining
