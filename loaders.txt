@@ -81,3 +81,20 @@ ADDED BABEl TRANSPILER into this webpack
 AFTER ADDING BABEL-loADER , Babel-polyfill we saw a huge icreasse in the file size of vendor.js , need to adress this 
 
 Try to add Babel 7 into webpack instaed of current babel6 , with new plugin like - Proposal Optional Chaining
+
+Also Axios Http CLient lib is taking too much of size , may find an alternative to this.
+see if u can enable gzip, brotil encoding compression using webpack dev-server or create a node server which supportr gzip (done)
+	"dev": "webpack-dev-server --config webpack.dev.js --compress true --open",
+
+=====================
+Broti compression algorith via webpack can be best to serve gzip or brotli resources and place it in your server and your server extra load of comressing thing on the fly get reduced and based on the browser request one can serve brotli if support or else fall back to gzip
+	https://www.keycdn.com/blog/brotli-with-webpack
+	https://www.npmjs.com/package/brotli-gzip-webpack-plugin
+	https://www.codementor.io/@rachitgulati/express-brotli-webpack-uarb1of3j
+	https://medium.com/groww-engineering/enable-brotli-compression-in-webpack-with-fallback-to-gzip-397a57cf9fc6
+		browseer reuest heards might be as follows :
+			Accept: */*
+			Accept-Encoding: gzip, deflate, br
+=====================
+
+

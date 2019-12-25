@@ -1,3 +1,4 @@
+import '@babel/polyfill';
 import './styles/scss/index.scss';
 import { runApp } from './scripts/app';
 
@@ -10,6 +11,7 @@ let a = () => {
 };
 
 // test babel polyfill
+
 async function getPosts() {
 	const callApi = await fetch('https://jsonplaceholder.typicode.com/posts');
 	const responseData = await callApi.json();
@@ -19,5 +21,12 @@ async function getPosts() {
 getPosts().then((posts) => {
 	console.log('reply from async await example', posts);
 });
+
 // run a single app
+var array = [ 1, 2, 3 ];
+
+Array.from(array).forEach(($item) => {
+	console.log($item);
+});
+
 runApp();

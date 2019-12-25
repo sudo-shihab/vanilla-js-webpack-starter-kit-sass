@@ -33,5 +33,17 @@ module.exports = merge(webpackCommon, {
 				use: [ MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader' ]
 			}
 		]
+	},
+	// chunks
+	optimization: {
+		splitChunks: {
+			cacheGroups: {
+				vendors: {
+					test: /[\\/]node_modules[\\/]/, // this is what you are looking for
+					name: 'vendor',
+					chunks: 'all'
+				}
+			}
+		}
 	}
 });

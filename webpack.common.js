@@ -1,5 +1,5 @@
 module.exports = {
-	entry: [ 'babel-polyfill', './src/index.js' ],
+	entry: './src/index.js',
 
 	//loaders
 	module: {
@@ -10,7 +10,15 @@ module.exports = {
 				use: {
 					loader: 'babel-loader',
 					options: {
-						presets: [ '@babel/preset-env' ]
+						presets: [
+							[
+								'@babel/preset-env',
+								{
+									useBuiltIns: 'usage',
+									corejs: '2.6.11'
+								}
+							]
+						]
 					}
 				}
 			},
@@ -39,18 +47,5 @@ module.exports = {
 				]
 			}
 		]
-	},
-
-	// chunks
-	optimization: {
-		splitChunks: {
-			cacheGroups: {
-				vendors: {
-					test: /[\\/]node_modules[\\/]/, // this is what you are looking for
-					name: 'vendor',
-					chunks: 'all'
-				}
-			}
-		}
 	}
 };
