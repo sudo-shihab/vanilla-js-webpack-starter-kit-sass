@@ -105,5 +105,14 @@ https://medium.com/@poshakajay/heres-how-i-reduced-my-bundle-size-by-90-2e14c8a1
 
 ======== =======
 
-==== Lazyloading images after page loads ==
+==== Lazyloading images after page loads == [DONE]
 http://blog.dynamicdrive.com/5-brilliant-ways-to-lazy-load-images-for-faster-page-loads/
+https://github.com/verlok/lazyload
+https://thinker3197.github.io/progressively/
+
+
+====== 
+you can add support for dynamic import using babel6
+https://itnext.io/lazy-loading-polyfills-4b85c4951e73
+pollyfill.io
+====

@@ -1,10 +1,13 @@
 import '@babel/polyfill';
 import './styles/scss/index.scss';
 import { runApp } from './scripts/app';
+import lazyLoadInit from './scripts/lazyLoadConfig';
 
+lazyLoadInit();
 // if any application level configs like running multiple app instances
 console.log('hello welcome to the webpack starter pack app');
 console.log('shihabhere');
+
 [ 1, 2, 3 ].map((n) => n ** 2); // test babel loader
 let a = () => {
 	console.log('hello there');
