@@ -92,9 +92,18 @@ Broti compression algorith via webpack can be best to serve gzip or brotli resou
 	https://www.npmjs.com/package/brotli-gzip-webpack-plugin
 	https://www.codementor.io/@rachitgulati/express-brotli-webpack-uarb1of3j
 	https://medium.com/groww-engineering/enable-brotli-compression-in-webpack-with-fallback-to-gzip-397a57cf9fc6
+	https://medium.com/@selvaganesh93/how-to-serve-webpack-gzipped-file-in-production-using-nginx-692eadbb9f1c
 		browseer reuest heards might be as follows :
 			Accept: */*
 			Accept-Encoding: gzip, deflate, br
 =====================
 
+====== Code Spliting can be improved ======
 
+https://medium.com/hackernoon/the-100-correct-way-to-split-your-chunks-with-webpack-f8a9df5b7758
+https://medium.com/@poshakajay/heres-how-i-reduced-my-bundle-size-by-90-2e14c8a11c11
+
+======== =======
+
+==== Lazyloading images after page loads ==
+http://blog.dynamicdrive.com/5-brilliant-ways-to-lazy-load-images-for-faster-page-loads/
