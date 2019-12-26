@@ -107,23 +107,70 @@ https://www.freecodecamp.org/news/learn-webpack-by-example-simple-code-splitting
 
 ======== =======
 
-==== Lazyloading images after page loads == [DONE]
+==== Image Optimization ====
+ Lazyloading images after page loads == [DONE]
 http://blog.dynamicdrive.com/5-brilliant-ways-to-lazy-load-images-for-faster-page-loads/
 https://github.com/verlok/lazyload
 https://thinker3197.github.io/progressively/
-
-
-====== 
-you can add support for dynamic import using babel6
-https://itnext.io/lazy-loading-polyfills-4b85c4951e73
-pollyfill.io
-====
-
-======
+image processing service
+web-p support - https://www.freecodecamp.org/news/make-your-website-load-lightning-fast-with-webp-images-cf55c98ac0a2/
+image processing service
 image kit integration for blur iage and dynamic image uisng smthng like lamda function 
-===
+https://www.keycdn.com/blog/responsive-images
+npm install url-loader
+imagemin
+imagemin-webp 
+https://www.andreaverlicchi.eu/lazy-load-responsive-images-in-2019-srcset-sizes-more/
+https://www.imgix.com/
+https://www.cloudimage.io/
+https://imagekit.io/blog/lazy-loading-images-complete-guide/
+https://imagekit.io/blog/network-based-image-optimization-and-role-of-service-workers/
+====== 
+
+=== image kit optimization [done] ==
+// for actual image with blur as a placeholder 
+https://ik.imagekit.io/vjmibljw7/tr:w-700,f-webp,q-10,bl-50/shiv-prasad-cQcBeKdpsPE-unsplash_csTiq4HOW.jpg
+https://imagekit.io/blog/network-based-image-optimization-and-role-of-service-workers/
+// or as a image backgrund color to take as primary and scale it up to match the color of image
+https://ik.imagekit.io/vjmibljw7/tr:w-1,h-1:w-400,h-300,f-webp,q-10,bl-50/shiv-prasad-cQcBeKdpsPE-unsplash_csTiq4HOW.jpg
+https://imagekit.io/blog/lazy-loading-images-complete-guide/
+=====
 
 === 
 Better Way of Handling Polyfiils
+pollyfill.io
 https://itnext.io/lazy-loading-polyfills-4b85c4951e73
+https://medium.com/hackernoon/polyfills-everything-you-ever-wanted-to-know-or-maybe-a-bit-less-7c8de164e423
+
+
 ===
+
+===
+POSTCSS CONFIGS WITH TAILWIND SETUP
+======
+
+== minification of image can be considered ==
+
+==== =====
+
+== Font loader can be injected ==
+https://chriscourses.com/blog/loading-fonts-webpack
+=========
+
+
+== No script implementation ===
+<noscript>
+        <p>any kind of content you want to be unveiled</p>
+    </noscript>
+================================
+
+=====
+url-loader configuration for webpack along with file loader
+====
+
+===
+converst svg to font-icon svg version
+https://www.npmjs.com/package/icon-font-generator
+https://www.npmjs.com/package/icon-font-loader
+https://github.com/itgalaxy/webfont-webpack-plugin
+====

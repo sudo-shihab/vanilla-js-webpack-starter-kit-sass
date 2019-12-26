@@ -37,6 +37,22 @@ module.exports = {
 				test: /\.(svg|png|jpe?g|gif)$/i,
 				use: [
 					{
+						loader: 'url-loader',
+						options: {
+							esModule: false,
+							fallback: require.resolve('file-loader'),
+							limit: 9000,
+							name: '[name].[hash].[ext]',
+							outputPath: 'images'
+						}
+					}
+				]
+			}
+			/** file-loader fall back if url-loader doesnt work
+			 * {
+				test: /\.(svg|png|jpe?g|gif)$/i,
+				use: [
+					{
 						loader: 'file-loader',
 						options: {
 							esModule: false,
@@ -46,6 +62,7 @@ module.exports = {
 					}
 				]
 			}
+			 */
 		]
 	}
 };

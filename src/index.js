@@ -1,4 +1,3 @@
-import '@babel/polyfill';
 import './styles/scss/index.scss';
 import { runApp } from './scripts/app';
 import lazyLoadInit from './scripts/lazyLoadConfig';
