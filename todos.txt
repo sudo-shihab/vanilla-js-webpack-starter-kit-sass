@@ -102,6 +102,8 @@ Broti compression algorith via webpack can be best to serve gzip or brotli resou
 
 https://medium.com/hackernoon/the-100-correct-way-to-split-your-chunks-with-webpack-f8a9df5b7758
 https://medium.com/@poshakajay/heres-how-i-reduced-my-bundle-size-by-90-2e14c8a11c11
+https://developers.google.com/web/fundamentals/performance/optimizing-javascript/code-splitting
+https://www.freecodecamp.org/news/learn-webpack-by-example-simple-code-splitting-in-a-vanilla-javascript-app-b366798336a4/
 
 ======== =======
 
@@ -116,3 +118,7 @@ you can add support for dynamic import using babel6
 https://itnext.io/lazy-loading-polyfills-4b85c4951e73
 pollyfill.io
 ====
+
+======
+image kit integration for blur iage and dynamic image uisng smthng like lamda function 
+===
