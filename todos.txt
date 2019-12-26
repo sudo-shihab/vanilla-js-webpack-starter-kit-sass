@@ -122,3 +122,8 @@ pollyfill.io
 ======
 image kit integration for blur iage and dynamic image uisng smthng like lamda function 
 ===
+
+=== 
+Better Way of Handling Polyfiils
+https://itnext.io/lazy-loading-polyfills-4b85c4951e73
+===
