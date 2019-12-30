@@ -125,6 +125,8 @@ https://www.imgix.com/
 https://www.cloudimage.io/
 https://imagekit.io/blog/lazy-loading-images-complete-guide/
 https://imagekit.io/blog/network-based-image-optimization-and-role-of-service-workers/
+https://www.npmjs.com/package/image-webpack-loader
+https://iamakulov.com/notes/optimize-images-webpack/
 ====== 
 
 === image kit optimization [done] ==
@@ -134,6 +136,8 @@ https://imagekit.io/blog/network-based-image-optimization-and-role-of-service-wo
 // or as a image backgrund color to take as primary and scale it up to match the color of image
 https://ik.imagekit.io/vjmibljw7/tr:w-1,h-1:w-400,h-300,f-webp,q-10,bl-50/shiv-prasad-cQcBeKdpsPE-unsplash_csTiq4HOW.jpg
 https://imagekit.io/blog/lazy-loading-images-complete-guide/
+https://imagekit.io/blog/smart-crop-deliver-perfect-responsive-images/
+https://imagekit.io/blog/lighter-automatic-responsive-images-client-hints/
 =====
 
 === 
@@ -155,6 +159,7 @@ POSTCSS CONFIGS WITH TAILWIND SETUP
 
 == Font loader can be injected ==
 https://chriscourses.com/blog/loading-fonts-webpack
+https://survivejs.com/webpack/loading/fonts/
 =========
 
 
@@ -170,7 +175,32 @@ url-loader configuration for webpack along with file loader
 
 ===
 converst svg to font-icon svg version
+ADDED - svg-url-loader ( url encoding)
+https://survivejs.com/webpack/loading/fonts/
 https://www.npmjs.com/package/icon-font-generator
 https://www.npmjs.com/package/icon-font-loader
 https://github.com/itgalaxy/webfont-webpack-plugin
+https://www.npmjs.com/package/fontmin-webpack
 ====
+
+== tree shaking / purging of css ==
+https://github.com/FullHuman/purgecss-webpack-plugin
+==== ===
+
+====
+extract critical css to head 
+===
+
+=====
+minify js
+https://github.com/webpack-contrib/terser-webpack-plugin
+====
+===
+https://hackernoon.com/a-tale-of-webpack-4-and-how-to-finally-configure-it-in-the-right-way-4e94c8e7e5c1
+https://www.npmjs.com/package/webpack-md5-hash
+===
+
+old min css = maincfc45d940750b1dd6bd6.min
+old main.js file = main0834faad4aa19036c348.min
+npm.axios40597d7a8f77d6e12018.min
+hello.2fa2ff7d04ec88af6ccc5b0c66619e38

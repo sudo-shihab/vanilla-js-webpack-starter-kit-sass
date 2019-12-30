@@ -61,6 +61,7 @@ module.exports = merge(webpackCommon, {
 		new BundleAnalyzerPlugin(),
 		new HtmlWebpackPlugin({
 			template: './src/index.html',
+			hash: true,
 			minify: {
 				removeAttributeQuotes: true,
 				removeComments: true,
