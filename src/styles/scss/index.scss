@@ -9,12 +9,47 @@
 // your app css starts here
 $body-color: #eee;
 
+/* abril-fatface-regular - latin */
+/* abril-fatface-regular - latin */
+/* abril-fatface-regular - latin */
+@font-face {
+	font-family: 'Abril Fatface';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url('../../fonts/abril-fatface-v11-latin-regular.eot'); /* IE9 Compat Modes */
+	src: local('Abril Fatface'), local('AbrilFatface-Regular'),
+		url('../../fonts/abril-fatface-v11-latin-regular.woff2') format('woff2'),
+		url('../../fonts/abril-fatface-v11-latin-regular.woff') format('woff'),
+		url('../../fonts/abril-fatface-v11-latin-regular.ttf') format('truetype'),
+		url('../../fonts/abril-fatface-v11-latin-regular.eot?#iefix') format('embedded-opentype'),
+		url('../../fonts/abril-fatface-v11-latin-regular.svg#AbrilFatface') format('svg'); /* Legacy iOS */
+}
+
+/* courier-prime-regular - latin */
+@font-face {
+	font-family: 'Courier Prime';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url('../../fonts/courier-prime-v1-latin-regular.eot'); /* IE9 Compat Modes */
+	src: local('Courier Prime Regular'), local('CourierPrime-Regular'),
+		url('../../fonts/courier-prime-v1-latin-regular.eot?#iefix') format('embedded-opentype'),
+		url('../../fonts/courier-prime-v1-latin-regular.woff2') format('woff2'),
+		url('../../fonts/courier-prime-v1-latin-regular.woff') format('woff'),
+		url('../../fonts/courier-prime-v1-latin-regular.ttf') format('truetype'),
+		url('../../fonts/courier-prime-v1-latin-regular.svg#CourierPrime') format('svg'); /* Legacy iOS */
+}
+
 body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+		"Droid Sans", "Helvetica Neue", sans-serif;
 	color: $body-color;
 	min-height: 10vh;
 }
 
 h1 {
+	font-family: 'Courier Prime', Arial, Helvetica, sans-serif;
 	color: #ddd;
 }
 

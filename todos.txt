@@ -160,6 +160,16 @@ POSTCSS CONFIGS WITH TAILWIND SETUP
 == Font loader can be injected ==
 https://chriscourses.com/blog/loading-fonts-webpack
 https://survivejs.com/webpack/loading/fonts/
+https://google-webfonts-helper.herokuapp.com/
+https://github.com/typekit/webfontloader
+https://github.com/bramstein/fontfaceobserver
+
+// best =---> https://www.youtube.com/watch?v=s-G1m23Emlk
+	https://github.com/chhib/dt-font-loading
+	https://survivejs.com/webpack/loading/fonts/
+	https://google-webfonts-helper.herokuapp.com/
+/// =========>
+ 
 =========
 
 
@@ -204,3 +214,20 @@ old min css = maincfc45d940750b1dd6bd6.min
 old main.js file = main0834faad4aa19036c348.min
 npm.axios40597d7a8f77d6e12018.min
 hello.2fa2ff7d04ec88af6ccc5b0c66619e38
+
+
+
+=======
+https://survivejs.com/webpack/introduction/
+======
+
+===
+sepearate .babelrc and post.config.js 
+===
+
+======================================-============================ PRPLL Pattern =======
+https://www.npmjs.com/package/preload-webpack-plugin
+https://web.dev/uses-long-cache-ttl/?utm_source=lighthouse&utm_medium=devtools
+
+https://web.dev/render-blocking-resources/?utm_source=lighthouse&utm_medium=devtools
+https://web.dev/defer-non-critical-css/

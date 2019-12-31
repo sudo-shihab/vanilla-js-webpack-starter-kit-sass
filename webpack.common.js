@@ -68,6 +68,15 @@ module.exports = {
 				// before url-loader/svg-url-loader
 				// and not duplicate it in rules with them
 				enforce: 'pre'
+			},
+			{
+				test: /\.(ttf|eot|woff|woff2|svg#)$/,
+				use: {
+					loader: 'file-loader',
+					options: {
+						name: 'fonts/[name].[ext]'
+					}
+				}
 			}
 			/** file-loader fall back if url-loader doesnt work
 			 * {

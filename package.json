@@ -7,7 +7,7 @@
 	"scripts": {
 		"dev": "webpack-dev-server --config webpack.dev.js --compress true --open",
 		"build": "webpack --config webpack.prod.js",
-		"serve:dist": "http-server ./dist -p 5003 -b -g"
+		"serve:dist": "http-server ./dist -p 5003 -b -g -c5000000 "
 	},
 	"keywords": [],
 	"author": "",
