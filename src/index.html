@@ -9,23 +9,20 @@
     <meta http-equiv="Expires" content="0" />
     <meta http-equiv="Accept-CH" content="DPR"/>
     <title>webpack starter- shihab</title>
-  
-
-
     <style>
+        /* inlined critical CSS */
         body {
             background: #000;
         }
         h1{
             font-size: 6rem;
         }
+        .lazy {
+            margin-bottom: 300px;
+        }
     </style>
-
 </head>
 <body>
-    <noscript>
-        <p>any kind of content you want to be unveiled</p>
-    </noscript>
     <h1>Hello World </h1>
     <h1>Webpack JS vanilla start dfdfe ff gb  fdggfhhh fgghh fvfvv f rs</h1>
     <div class="div" style="height: 700px;width: 100%;background: #eee;"></div>    
@@ -33,7 +30,34 @@
         <img src="./images/jpg/hello.jpg" alt="">
     </div>
     <div>
-        <img src="https://ik.imagekit.io/vjmibljw7/tr:w-700,f-webp,q-10,bl-50/shiv-prasad-cQcBeKdpsPE-unsplash_csTiq4HOW.jpg" alt="">
+      
+        <img alt="A lazy image" class="lazy" src="https://ik.imagekit.io/vjmibljw7/tr:w-700,q-10,f-webp,bl-50/shiv-prasad-cQcBeKdpsPE-unsplash_csTiq4HOW.jpg" data-src="https://ik.imagekit.io/vjmibljw7/tr:w-700,q-80/shiv-prasad-cQcBeKdpsPE-unsplash_csTiq4HOW.jpg">
+    </div>
+
+    <div>
+      
+        <img alt="A lazy image" class="lazy" src="https://ik.imagekit.io/vjmibljw7/tr:w-700,q-10,f-webp,bl-50/indians_w1m-DzYyu.jpg" data-src="https://ik.imagekit.io/vjmibljw7/tr:w-700,q-80/indians_w1m-DzYyu.jpg">
+    </div>
+
+    <div>
+      
+        <img alt="A lazy image" class="lazy" src="https://ik.imagekit.io/vjmibljw7/tr:w-700,q-80,f-webp/dec-15-winter-solstice-nocal-2560x1440_-dg7r0DNx.jpg" data-src="https://ik.imagekit.io/vjmibljw7/tr:w-700,q-10/dec-15-winter-solstice-nocal-2560x1440_-dg7r0DNx.jpg">
+    </div>
+    <div>
+      
+        <img alt="A lazy image" class="lazy" src="https://ik.imagekit.io/vjmibljw7/tr:w-700,q-10,bl-50/Screenshot_2019-12-25_at_5.03.47_AM_8FqKHE2pW.png" data-src="https://ik.imagekit.io/vjmibljw7/tr:w-700,q-80/Screenshot_2019-12-25_at_5.03.47_AM_8FqKHE2pW.png">
+    </div>
+    <div>
+      
+        <img alt="A lazy image" class="lazy" src="https://ik.imagekit.io/vjmibljw7/tr:w-900,q-10,bl-50/shiv-prasad-cQcBeKdpsPE-unsplash_csTiq4HOW.jpg" data-src="https://ik.imagekit.io/vjmibljw7/tr:w-900,q-80/shiv-prasad-cQcBeKdpsPE-unsplash_csTiq4HOW.jpg">
+    </div>
+    <div>
+      
+        <img alt="A lazy image" class="lazy" src="https://ik.imagekit.io/vjmibljw7/tr:w-800,q-10,bl-50/shiv-prasad-cQcBeKdpsPE-unsplash_csTiq4HOW.jpg" data-src="https://ik.imagekit.io/vjmibljw7/tr:w-800,q-80/shiv-prasad-cQcBeKdpsPE-unsplash_csTiq4HOW.jpg">
+    </div>
+    <div>
+      
+        <img alt="A lazy image" class="lazy" src="https://ik.imagekit.io/vjmibljw7/tr:w-500,q-10,bl-50/shiv-prasad-cQcBeKdpsPE-unsplash_csTiq4HOW.jpg" data-src="https://ik.imagekit.io/vjmibljw7/tr:w-500,q-80/shiv-prasad-cQcBeKdpsPE-unsplash_csTiq4HOW.jpg">
     </div>
 
 
@@ -268,5 +292,9 @@
             </li>
         </ul>
     </div>
+
+    <noscript>
+        This site uses JavaScript. Please enable JavaScript in your browser.
+    </noscript>
 </body>
 </html>

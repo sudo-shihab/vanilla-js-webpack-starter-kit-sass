@@ -25,6 +25,7 @@ module.exports = merge(webpackCommon, {
 		]
 	},
 	// chunks
+	/*
 	optimization: {
 		runtimeChunk: 'single',
 		splitChunks: {
@@ -44,6 +45,11 @@ module.exports = merge(webpackCommon, {
 					}
 				}
 			}
+		}
+	},*/
+	optimization: {
+		splitChunks: {
+			chunks: 'all'
 		}
 	},
 

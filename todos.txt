@@ -216,6 +216,9 @@ npm.axios40597d7a8f77d6e12018.min
 hello.2fa2ff7d04ec88af6ccc5b0c66619e38
 
 
+AUTO PREFIXES FOR SASS
+https://medium.com/@realfrancisyan/scss-autoprefixer-with-webpack-9f8456ae751b
+https://stackoverflow.com/questions/38010421/css-autoprefixer-with-webpack
 
 =======
 https://survivejs.com/webpack/introduction/
@@ -225,9 +228,20 @@ https://survivejs.com/webpack/introduction/
 sepearate .babelrc and post.config.js 
 ===
 
-======================================-============================ PRPLL Pattern =======
+======================================-============================ App shell / PRPLL Pattern / Service workers=======
 https://www.npmjs.com/package/preload-webpack-plugin
 https://web.dev/uses-long-cache-ttl/?utm_source=lighthouse&utm_medium=devtools
 
 https://web.dev/render-blocking-resources/?utm_source=lighthouse&utm_medium=devtools
 https://web.dev/defer-non-critical-css/
+
+// IMPORTANT
+https://morioh.com/p/e941b22aa736
+https://github.com/NekR/offline-plugin
+https://www.smashingmagazine.com/2019/06/pwa-webpack-workbox/
+https://codeburst.io/progressive-web-app-with-webpack-198b073f6c74
+npm i sw-precache-webpack-plugin webpack-pwa-manifest -D
+https://developers.google.com/web/fundamentals/architecture/app-shell
+
+ADDED ==> const HtmlCriticalWebpackPlugin = require("html-critical-webpack-plugin");
+https://www.npmjs.com/package/critters-webpack-plugin

@@ -7,6 +7,7 @@ const logEvent = (eventName, element) => {
 const lazyLoadOptions = {
 	elements_selector: '.lazy',
 	to_webp: true,
+	thresholds: '100px',
 
 	callback_enter: (element) => {
 		logEvent('ENTERED', element);
