@@ -19,6 +19,8 @@ module.exports = merge(webpackCommon, {
 					'style-loader',
 					// Translates CSS into CommonJS
 					'css-loader',
+					// post css loader
+					'postcss-loader',
 					// Compiles Sass to CSS
 					'sass-loader'
 				]

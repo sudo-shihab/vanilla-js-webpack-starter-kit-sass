@@ -245,3 +245,18 @@ https://developers.google.com/web/fundamentals/architecture/app-shell
 
 ADDED ==> const HtmlCriticalWebpackPlugin = require("html-critical-webpack-plugin");
 https://www.npmjs.com/package/critters-webpack-plugin
+
+
+
+
+== Micro Services ===
+https://single-spa.js.org/
+https://www.youtube.com/watch?v=vjjcuIxqIzY&list=PLLUD8RtHvsAOhtHnyGx57EYXoaNsxGrTU&index=4
+
+== SPA ==
+https://viblo.asia/p/quick-webpack-set-up-for-single-page-applications-aWj53Xk8K6m
+
+
+
+==== Tree shaking === 
+https://github.com/babel/babel-loader/issues/521

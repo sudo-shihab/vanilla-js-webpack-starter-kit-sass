@@ -20,7 +20,7 @@ module.exports = merge(webpackCommon, {
 		rules: [
 			{
 				test: /\.s[ac]ss$/i,
-				use: [ MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader' ]
+				use: [ MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader' ]
 			}
 		]
 	},

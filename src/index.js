@@ -3,32 +3,37 @@ import { runApp } from './scripts/app';
 import lazyLoadInit from './scripts/lazyLoadConfig';
 
 lazyLoadInit();
-// if any application level configs like running multiple app instances
-console.log('hello welcome to the webpack starter pack app');
-console.log('shihabhere');
 
-[ 1, 2, 3 ].map((n) => n ** 2); // test babel loader
-let a = () => {
-	console.log('hello there');
-};
+window.addEventListener('load', (event) => {
+	console.log('page is fully loaded');
 
-// test babel polyfill
+	// if any application level configs like running multiple app instances
+	console.log('hello welcome to the webpack starter pack app');
+	console.log('shihabhere');
 
-async function getPosts() {
-	const callApi = await fetch('https://jsonplaceholder.typicode.com/posts');
-	const responseData = await callApi.json();
-	return responseData;
-}
+	[ 1, 2, 3 ].map((n) => n ** 2); // test babel loader
+	let a = () => {
+		console.log('hello there');
+	};
 
-getPosts().then((posts) => {
-	console.log('reply from async await example', posts);
+	// test babel polyfill
+
+	async function getPosts() {
+		const callApi = await fetch('https://jsonplaceholder.typicode.com/posts');
+		const responseData = await callApi.json();
+		return responseData;
+	}
+
+	getPosts().then((posts) => {
+		console.log('reply from async await example', posts);
+	});
+
+	// run a single app
+	var array = [ 1, 2, 3 ];
+
+	Array.from(array).forEach(($item) => {
+		console.log($item);
+	});
+
+	runApp();
 });
-
-// run a single app
-var array = [ 1, 2, 3 ];
-
-Array.from(array).forEach(($item) => {
-	console.log($item);
-});
-
-runApp();
