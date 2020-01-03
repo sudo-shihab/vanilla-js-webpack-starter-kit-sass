@@ -7,6 +7,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 const BrotliPlugin = require('brotli-webpack-plugin');
+var OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 module.exports = merge(webpackCommon, {
 	devtool: 'source-map',
@@ -63,6 +64,14 @@ module.exports = merge(webpackCommon, {
 
 	plugins: [
 		new MiniCssExtractPlugin({ filename: '[name][contentHash].min.css' }),
+		new OptimizeCssAssetsPlugin({
+			assetNameRegExp: /\.css$/g,
+			cssProcessor: require('cssnano'),
+			cssProcessorPluginOptions: {
+				preset: [ 'default', { discardComments: { removeAll: true } } ]
+			},
+			canPrint: true
+		}),
 		new CleanWebpackPlugin(),
 		new BundleAnalyzerPlugin(),
 		new HtmlWebpackPlugin({
