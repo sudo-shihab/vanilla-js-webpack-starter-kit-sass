@@ -18,7 +18,8 @@ module.exports = {
 									corejs: '2.6.11'
 								}
 							]
-						]
+						],
+						plugins: [ '@babel/plugin-proposal-optional-chaining' ]
 					}
 				}
 			},

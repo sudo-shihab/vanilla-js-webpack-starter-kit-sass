@@ -64,6 +64,8 @@ Extract DOM injected css to seprate file with mini-css-extract-plugin
 
 MiniCssExtractPlugin
 
+optimize css assets plugin
+
 
 finally miniize html
 new HtmlWebpackPlugin({
@@ -260,3 +262,19 @@ https://viblo.asia/p/quick-webpack-set-up-for-single-page-applications-aWj53Xk8K
 
 ==== Tree shaking === 
 https://github.com/babel/babel-loader/issues/521
+https://wanago.io/2018/08/13/webpack-4-course-part-seven-decreasing-the-bundle-size-with-tree-shaking/
+
+
+== security  for CSP ---
+nounce == > __webpack_nonce__ = 'c29tZSBjb29sIHN0cmluZyB3aWxsIHBvcCB1cCAxMjM='; in entry file 
+https://excess-xss.com/
+
+
+== babel plugin for dev ==
+https://github.com/MatAtBread/fast-async
+@babel/plugin-transform-arrow-functions"]
+
+
+https://medium.com/walmartlabs/infinite-scrolling-the-right-way-11b098a08815
+
+WebFontPlugin - cnvert svg to icons

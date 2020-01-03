@@ -1,4 +1,5 @@
 import './styles/scss/index.scss';
+
 import { runApp } from './scripts/app';
 import lazyLoadInit from './scripts/lazyLoadConfig';
 
@@ -35,5 +36,36 @@ window.addEventListener('load', (event) => {
 		console.log($item);
 	});
 
+
+	// testing babel chaing proposal plugin
+	const obj = {
+		foo: {
+		  bar: {
+			baz() {
+			  return 42;
+			},
+		  },
+		},
+	  };
+	  
+	  const baz = obj?.foo?.bar?.baz(); // 42
+	  console.log("baz", baz);
+
+
+	  const safe = obj?.qux?.baz(); // undefined
+const safe2 = obj?.foo.bar.qux?.(); // undefined
+console.log('safe',safe );
+console.log('safe2',safe2 );
+
+
+
+
+// Top function can be called directly, too.
+function test() {
+  return 42;
+}
+test?.(); // 42
+
+	  
 	runApp();
 });
