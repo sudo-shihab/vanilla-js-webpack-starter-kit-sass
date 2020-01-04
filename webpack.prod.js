@@ -8,6 +8,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 const BrotliPlugin = require('brotli-webpack-plugin');
 var OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = merge(webpackCommon, {
 	devtool: 'source-map',
@@ -49,6 +50,8 @@ module.exports = merge(webpackCommon, {
 		}
 	},*/
 	optimization: {
+		minimize: true,
+		minimizer: [ new TerserPlugin() ],
 		splitChunks: {
 			chunks: 'all'
 		}
