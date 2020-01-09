@@ -302,3 +302,30 @@ https://codeburst.io/process-env-what-it-is-and-why-when-how-to-use-it-effective
 https://dev.to/deammer/loading-environment-variables-in-js-apps-1p7p
 
 https://unused-css.com/blog/are-service-workers-faster-than-the-browser-cache/
+
+
+==== use chaing of loaders with option example ====
+
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
+module.exports = {
+  plugins: [new MiniCssExtractPlugin()],
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              esModule: true,
+            },
+          },
+          'css-loader',
+        ],
+      },
+    ],
+  },
+};
+
+=============
