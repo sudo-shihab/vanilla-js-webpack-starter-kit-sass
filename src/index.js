@@ -5,6 +5,8 @@ import lazyLoadInit from './scripts/lazyLoadConfig';
 
 lazyLoadInit();
 
+console.log(process.env.DB_HOST);
+
 window.addEventListener('load', (event) => {
 	console.log('page is fully loaded');
 

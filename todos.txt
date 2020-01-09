@@ -69,7 +69,11 @@ optimize css assets plugin
 tailwind with purging added using - @fullhalfman cs
 https://github.com/webpack-contrib/terser-webpack-plugin
 
-offline support added - offline webpack plugin
+offline support added - offline webpack plugin //  not done
+
+added inlince-critical-webpack plugin and add new webpack config to generate the critical patch css , since this depends on headless chrome not recommended for ci/cd pipeline
+
+add doeenv webpack plugin 
 
 finally miniize html
 new HtmlWebpackPlugin({
