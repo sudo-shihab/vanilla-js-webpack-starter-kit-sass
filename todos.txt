@@ -66,7 +66,10 @@ MiniCssExtractPlugin
 
 optimize css assets plugin
 
+tailwind with purging added using - @fullhalfman cs
 https://github.com/webpack-contrib/terser-webpack-plugin
+
+offline support added - offline webpack plugin
 
 finally miniize html
 new HtmlWebpackPlugin({
@@ -278,6 +281,20 @@ https://github.com/MatAtBread/fast-async
 
 https://medium.com/walmartlabs/infinite-scrolling-the-right-way-11b098a08815
 
-WebFontPlugin - cnvert svg to icons
+WebFontPlugin - convert svg to icons
 
 i18n support 
+https://survivejs.com/webpack/building/code-splitting/
+
+
+[hash] test ---> hello.2fa2ff7d04ec88af6ccc5b0c66619e38.jpg  
+mainbb062850b9e116b5f675.min.css
+vendors~main8000124a0f19992e82c8.min.js  vendors~main8000124a0f19992e82c8.min
+main8c6c3d8b96e8f608f3bf.min.js
+
+
+=====
+https://codeburst.io/process-env-what-it-is-and-why-when-how-to-use-it-effectively-505d0b2831e7
+https://dev.to/deammer/loading-environment-variables-in-js-apps-1p7p
+
+https://unused-css.com/blog/are-service-workers-faster-than-the-browser-cache/
