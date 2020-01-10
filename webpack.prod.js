@@ -9,6 +9,7 @@ const CompressionPlugin = require('compression-webpack-plugin');
 const BrotliPlugin = require('brotli-webpack-plugin');
 var OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
+const PreloadWebpackPlugin = require('preload-webpack-plugin');
 
 module.exports = merge(webpackCommon, {
 	devtool: 'source-map',
@@ -79,12 +80,16 @@ module.exports = merge(webpackCommon, {
 		new BundleAnalyzerPlugin(),
 		new HtmlWebpackPlugin({
 			template: './src/index.html',
-			hash: true,
 			minify: {
 				removeAttributeQuotes: true,
 				removeComments: true,
 				collapseWhitespace: true
 			}
+		}),
+
+		new PreloadWebpackPlugin({
+			rel: 'preload',
+			include: 'initial' // initial or allchunks
 		}),
 		new CompressionPlugin({
 			filename: '[path].gz[query]',
