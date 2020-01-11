@@ -24,6 +24,10 @@ module.exports = merge(webpackCommon, {
 			{
 				test: /\.s[ac]ss$/i,
 				use: [ MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader' ]
+			},
+			{
+				test: /\.font\.js/,
+				use: [ MiniCssExtractPlugin.loader, 'css-loader', 'webfonts-loader' ]
 			}
 		]
 	},

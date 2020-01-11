@@ -1,5 +1,5 @@
 import './styles/scss/index.scss';
-
+require('./myfont.font.js');
 import { runApp } from './scripts/app';
 import lazyLoadInit from './scripts/lazyLoadConfig';
 

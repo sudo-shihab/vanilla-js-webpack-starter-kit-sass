@@ -24,6 +24,10 @@ module.exports = merge(webpackCommon, {
 					// Compiles Sass to CSS
 					'sass-loader'
 				]
+			},
+			{
+				test: /\.font\.js/,
+				use: [ 'style-loader', 'css-loader', 'webfonts-loader' ]
 			}
 		]
 	},
