@@ -4,6 +4,6 @@ module.exports = {
 	fontName: 'appfonticon',
 	classPrefix: 'appfonticon-',
 	baseSelector: '.appfonticon',
-	types: [ 'eot', 'woff', 'woff2', 'ttf', 'svg' ],
+	types: [ 'eot', 'woff2', 'woff', 'ttf', 'svg' ],
 	fileName: 'icns/[fontname].[hash].[ext]'
 };
