@@ -67,11 +67,32 @@ module.exports = {
 				}
 			},
 			{
-				test: /\.(jpg|png|gif|svg)$/,
+				test: /\.(jpe?g|png|gif|svg|webp)$/,
 				loader: 'image-webpack-loader',
 				// Specify enforce: 'pre' to apply the loader
 				// before url-loader/svg-url-loader
 				// and not duplicate it in rules with them
+				options: {
+					mozjpeg: {
+						progressive: true,
+						quality: 65
+					},
+					// optipng.enabled: false will disable optipng
+					optipng: {
+						enabled: false
+					},
+					pngquant: {
+						quality: [ 0.65, 0.9 ],
+						speed: 4
+					},
+					gifsicle: {
+						interlaced: false
+					},
+					// the webp option will enable WEBP
+					webp: {
+						quality: 75
+					}
+				},
 				enforce: 'pre'
 			},
 			{

@@ -7,7 +7,7 @@
 	"scripts": {
 		"dev": "webpack-dev-server --config webpack.dev.js --compress true --open",
 		"build": "webpack --config webpack.prod.js",
-		"serve:dist": "http-server ./dist -p 5003 -b -g",
+		"serve:dist": "http-server ./dist -p 5003 -b -g -c31536000",
 		"build:critical_css": "webpack --config webpack.critical.js",
 		"build:i18n": "webpack --config webpack.i18n.js"
 	},

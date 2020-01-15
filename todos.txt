@@ -75,6 +75,8 @@ added inlince-critical-webpack plugin and add new webpack config to generate the
 
 add doeenv webpack plugin 
 
+image minimization loader used for minimizing static images if any.
+
 finally miniize html
 new HtmlWebpackPlugin({
 			template: './src/index.html',
