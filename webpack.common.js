@@ -1,5 +1,6 @@
 const Dotenv = require('dotenv-webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const webpack = require('webpack');
 
 module.exports = {
 	entry: './src/index.js',
@@ -99,5 +100,10 @@ module.exports = {
 			 */
 		]
 	},
-	plugins: [ new Dotenv() ]
+	plugins: [
+		new webpack.DefinePlugin({
+			'process.traceDeprecation': true
+		}),
+		new Dotenv()
+	]
 };
