@@ -367,3 +367,12 @@ import "regenerator-runtime/runtime";
 				}
 			}
 ===========
+
+
+== performance ===
+
+try much to use img tag insteadof bg-img css property as this results in performance and also effects seo
+
+
+==== code quality example ==
+https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/dobetterweb/geolocation-on-start.js
