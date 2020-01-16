@@ -105,7 +105,6 @@ module.exports = merge(webpackCommon, {
 			test: /\.js$|\.css$|\.html$|\.eot?.+$|\.ttf?.+$|\.woff?.+$|\.svg?.+$|\.jpg?.$/,
 			threshold: 8192, // keep it 0 to test : make all file compresed
 			minRatio: 0.7 // keep it 1 to test :  make all file compressed
-		}),
-		new BundleAnalyzerPlugin()
+		})
 	]
 });

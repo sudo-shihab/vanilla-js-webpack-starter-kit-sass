@@ -2,8 +2,7 @@ import '../styles/scss/index.scss';
 import { AlertServiceComponent } from './alert-service.js';
 import { AddServiceComponent } from './add-service.js';
 import axios from 'axios';
-import lazyLoadInit from '../scripts/lazyLoadConfig';
-lazyLoadInit();
+
 
 export const  runApp =
 window.addEventListener('load', (event) => { 
@@ -46,9 +45,10 @@ window.addEventListener('load', (event) => {
 		// run a single app
 		var array = [ 1, 2, 3 ];
 	
+		/*
 		Array.from(array).forEach(($item) => {
 			console.log($item);
-		});
+		});*/
 	
 	
 		// testing babel chaing proposal plugin

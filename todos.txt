@@ -77,6 +77,8 @@ add doeenv webpack plugin
 
 image minimization loader used for minimizing static images if any.
 
+added a conditional polyfill structure;
+
 finally miniize html
 new HtmlWebpackPlugin({
 			template: './src/index.html',
