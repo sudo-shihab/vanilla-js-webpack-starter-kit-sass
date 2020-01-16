@@ -3,7 +3,10 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const webpack = require('webpack');
 
 module.exports = {
-	entry: './src/index.js',
+	entry: {
+		corePolyfills: './src/polyfills/core.js',
+		app: './src/index.js'
+	},
 
 	//loaders
 	module: {
@@ -18,8 +21,9 @@ module.exports = {
 							[
 								'@babel/preset-env',
 								{
-									useBuiltIns: 'usage',
-									corejs: '2.6.11'
+									targets: {
+										browsers: [ 'last 2 versions', 'IE >= 11' ]
+									}
 								}
 							]
 						],

@@ -336,3 +336,32 @@ module.exports = {
 ==== CSS OPTIMIZATION ==
 
 css rehydration ---> https://fela.js.org/
+
+
+== polyfiill on demand ===
+
+import "core-js/stable";
+import "regenerator-runtime/runtime";
+
+
+== babel original cnfig to add polyfill based on usage ==
+		{
+				test: /\.m?js$/,
+				exclude: /(node_modules|bower_components)/,
+				use: {
+					loader: 'babel-loader',
+					options: {
+						presets: [
+							[
+								'@babel/preset-env',
+								{
+									useBuiltIns: 'usage',
+									corejs: '2.6.11'
+								}
+							]
+						],
+						plugins: [ '@babel/plugin-proposal-optional-chaining', '@babel/plugin-syntax-dynamic-import' ]
+					}
+				}
+			}
+===========

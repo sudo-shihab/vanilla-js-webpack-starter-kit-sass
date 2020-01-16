@@ -58,7 +58,17 @@ module.exports = merge(webpackCommon, {
 		minimize: true,
 		minimizer: [ new TerserPlugin() ],
 		splitChunks: {
-			chunks: 'all'
+			chunks: 'all',
+			maxInitialRequests: Infinity,
+			minSize: 0,
+			cacheGroups: {
+				vendor: {
+					test: /[\\/]node_modules[\\/]/,
+					chunks: 'initial',
+					name: 'npm_bundle',
+					enforce: true
+				}
+			}
 		}
 	},
 
@@ -99,14 +109,14 @@ module.exports = merge(webpackCommon, {
 			filename: '[path].gz[query]',
 			algorithm: 'gzip',
 			test: /\.js$|\.css$|\.html$|\.eot?.+$|\.ttf?.+$|\.woff?.+$|\.svg?.+$|\.jpg?.$/,
-			threshold: 8192, // keep it 0 to test : make all file compresed
-			minRatio: 0.7 // keep it 1 to test :  make all file compressed
+			threshold: 2000, // keep it 0 to test : make all file compresed
+			minRatio: 0.9 // keep it 1 to test :  make all file compressed
 		}),
 		new BrotliPlugin({
 			asset: '[path].br[query]',
 			test: /\.js$|\.css$|\.html$|\.eot?.+$|\.ttf?.+$|\.woff?.+$|\.svg?.+$|\.jpg?.$/,
-			threshold: 8192, // keep it 0 to test : make all file compresed
-			minRatio: 0.7 // keep it 1 to test :  make all file compressed
+			threshold: 2000, // keep it 0 to test : make all file compresed
+			minRatio: 0.9 // keep it 1 to test :  make all file compressed
 		})
 	]
 });
