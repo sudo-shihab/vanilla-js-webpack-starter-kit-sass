@@ -120,3 +120,5 @@ module.exports = merge(webpackCommon, {
 		})
 	]
 });
+
+process.env.NODE_ENV = 'production';

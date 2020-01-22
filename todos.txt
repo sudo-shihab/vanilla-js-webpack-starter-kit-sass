@@ -367,3 +367,55 @@ import "regenerator-runtime/runtime";
 				}
 			}
 ===========
+
+
+
+=== html 5===
+https://medium.com/@zac_heisey/7-alternatives-to-the-div-html-tag-7c888c7b5036
+
+
+
+== purge css test ==
+if(process.env.NODE_ENV === 'production') {
+    module.exports = {
+        plugins: [
+            require('autoprefixer'),
+            require('cssnano')
+        ]
+    }
+}
+
+
+== old purging css ==
+
+const purgecss = require('@fullhuman/postcss-purgecss');
+
+if (process.env.NODE_ENV === 'production') {
+	module.exports = {
+		plugins: [
+			require('tailwindcss'),
+			require('autoprefixer'),
+			purgecss({
+				content: [ './src/**/*.html' ]
+			})
+		]
+	};
+}
+
+if (process.env.NODE_ENV === 'development') {
+	module.exports = {
+		plugins: [ require('tailwindcss'), require('autoprefixer') ]
+	};
+}
+
+
+=== plugins ==
+
+
+for time : {
+	timeago.js,
+}
+
+for scroll : {
+	https://idiotwu.github.io/smooth-scrollbar/
+}
