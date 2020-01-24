@@ -108,13 +108,13 @@ module.exports = merge(webpackCommon, {
 		new CompressionPlugin({
 			filename: '[path].gz[query]',
 			algorithm: 'gzip',
-			test: /\.js$|\.css$|\.html$|\.eot?.+$|\.ttf?.+$|\.woff?.+$|\.svg?.+$|\.jpg?.$/,
+			test: /\.js$|\.css$|\.html$|\.eot?.+$|\.ttf?.+$|\.woff?.+$|\.woff2?.+$|\.svg?.+$|\.jpg?.$/,
 			threshold: 2000, // keep it 0 to test : make all file compresed
 			minRatio: 0.9 // keep it 1 to test :  make all file compressed
 		}),
 		new BrotliPlugin({
 			asset: '[path].br[query]',
-			test: /\.js$|\.css$|\.html$|\.eot?.+$|\.ttf?.+$|\.woff?.+$|\.svg?.+$|\.jpg?.$/,
+			test: /\.js$|\.css$|\.html$|\.eot?.+$|\.ttf?.+$|\.woff?.+$|\.woff2?.+$|\.svg?.+$|\.jpg?.$/,
 			threshold: 2000, // keep it 0 to test : make all file compresed
 			minRatio: 0.9 // keep it 1 to test :  make all file compressed
 		})

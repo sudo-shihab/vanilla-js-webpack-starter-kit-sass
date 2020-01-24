@@ -1,9 +1,9 @@
 import template from './sideNav.html';
 import Mustache from 'mustache';
 
-export default class Header {
+export default class SideNavigation {
 	constructor() {
-		this.sideNavBar = document.querySelector('#category-navigation');
+		this.sideNavBar = document.querySelector('#main-navigation-sidebar');
 	}
 
 	render() {
