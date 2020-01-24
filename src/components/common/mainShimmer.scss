@@ -1,4 +1,5 @@
 #main-layout-shimmer-colllection {
+	padding: 0px 0px 20px 65px;
 	.br {
 		border-radius: 8px;
 	}
@@ -11,15 +12,10 @@
 	.shimmer {
 		margin: 0 3px;
 		background: #eee;
-		border-radius: 1px;
 		-webkit-box-shadow: 0 1rem 2rem 0 rgba(255, 255, 255, 0.35);
 		box-shadow: 0 1rem 2rem 0 rgba(255, 255, 255, 0.35);
 		overflow: hidden;
-		background: #f1f4f7;
-	}
-
-	.shimmer_nrml_crd {
-		margin: 0 15px 0 0;
+		background: #eee;
 	}
 
 	.animate {

@@ -17,9 +17,10 @@ export const app = {
 			console.log(
 				'hiding the loader, should call the API to retreive the data or you can intiate the routes, inside which u can call the api'
 			);
-			this.mainLoader.style.display = 'none';
+
 			// this.mainLoader.classList.toggle('hidden')
 			this.showMainShimmer();
+			this.mainLoader.style.display = 'none';
 		}, 500);
 	},
 
@@ -36,7 +37,7 @@ export const app = {
 		setTimeout(() => {
 			this.bodyDom.classList.toggle('overflow-y-hidden');
 			new mainCardGridLayoutComponent().render();
-		}, 2000);
+		}, 8000);
 		this.initCatgrySidebar();
 	}
 };
