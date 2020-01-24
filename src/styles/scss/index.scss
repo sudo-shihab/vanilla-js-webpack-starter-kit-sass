@@ -54,9 +54,28 @@ body {
 	font-family: "Open Sans", sans-serif;
 	font-weight: 400;
 	overflow-y: scroll;
+	font-size: 13px;
 	-webkit-transition: background-color .2s;
 	-webkit-font-smoothing: antialiased;
-	color: #344c64;
+	color: #18191b;
+}
+
+@keyframes slideleft {
+	from {
+		-webkit-transform: translate3d(-100%, 0, 0);
+		transform: translate3d(-100%, 0, 0);
+		visibility: visible;
+	}
+
+	to {
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+.slideleft {
+	-webkit-animation-name: slideleft;
+	animation-name: slideInLeft;
 }
 
 #logo {
@@ -105,10 +124,10 @@ main {
 }
 
 #category-navigation {
+	animation: slideleft 0.3s forwards;
 	will-change: opacity;
 	transition: width .2s, opacity .8s, box-shadow .1s linear .1s, background-color .3s;
 	-webkit-transition: width .2s, opacity .8s, box-shadow .1s linear .1s, background-color .3s;
-	cursor: pointer;
 }
 
 #category-navigation:hover {
@@ -118,9 +137,10 @@ main {
 	-webkit-transition: width .2s, opacity .8s, box-shadow .1s linear .1s, background-color .3s;
 }
 #category-navigation .catgry-list-hero-name {
-	padding: 10px 20px;
+	padding: 10px 20px 10px 30px;
 	font-size: 13px;
 	text-transform: capitalize;
+	color: rgba(74, 75, 76, 0.81);
 }
 #category-navigation:hover .catgry-list-hero-name {
 	opacity: 1;
@@ -129,26 +149,45 @@ main {
 	-webkit-transition: width .2s, opacity .8s, box-shadow .1s linear .1s, background-color .3s;
 }
 .category-list-block:hover {
-	background-color: #eee;
+	background-color: #e8ebed;
 	transition: background-color .2s, opacity .8s, box-shadow .1s linear .1s, background-color .3s;
 }
 .category-list-block {
 	.list-wrppr {
-		padding: 10px;
+		padding: 10px 10px;
 	}
 	.left-slot {
 		height: 40px;
 		width: 40px;
 		border-radius: 50%;
 		background: #ddd;
+		position: relative;
+		&:after {
+			position: absolute;
+			content: '';
+			right: -15px;
+			width: 1px;
+			height: 45%;
+			top: 13px;
+			background: #d8d8d8;
+		}
 	}
 	#recent-all-feeds {
-		background: linear-gradient(120deg, #0029ff 0%, #001270 100%),
-			radial-gradient(100% 222% at 0% 100%, #cd04ff 0%, #ff004d 57%),
-			linear-gradient(270deg, #f2096b 0%, #ed0b0b 100%), linear-gradient(300deg, #c478b3 0%, #ea2856 100%),
-			radial-gradient(90% 110% at 100% 100%, #96a300 45%, #875901 100%),
-			linear-gradient(6.54deg, #20adfd 7%, #1700a4 50%);
-		background-blend-mode: exclusion, color-dodge, color-burn, color-burn, color-dodge, normal;
+		background: linear-gradient(55deg, #000850 0%, #000320 100%),
+			radial-gradient(100% 225% at 100% 0%, #ff6928 0%, #000000 100%),
+			linear-gradient(235deg, #bdff00 0%, #000000 100%),
+			linear-gradient(
+				180deg,
+				#002bdc 0%,
+				#002bdc 45%,
+				#2f4bff 45%,
+				#2f4bff 60%,
+				#00a6e7 60%,
+				#00a6e7 80%,
+				#ffe37f 80%,
+				#ffe37f 100%
+			);
+		background-blend-mode: screen, overlay, hard-light, normal;
 	}
 
 	#nuxt-feeds {
@@ -168,25 +207,56 @@ main {
 		);
 	}
 	#blog-feeds {
-		background-image: linear-gradient(-60deg, #16a085 0%, #f4d03f 100%);
+		background-image: linear-gradient(to top, #1c231b 0%, #49b17e 100%);
+	}
+	#help-feeds {
+		background: linear-gradient(-180deg, #bcc5ce 0%, #929ead 98%),
+			radial-gradient(at top left, rgba(255, 255, 255, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%);
+		background-blend-mode: screen;
 	}
 }
 
 button.loader {
-	height: 40px;
-	width: 40px;
-	background: rgba(0, 0, 0, 0.2);
+	height: 80px;
+	width: 80px;
+	background: rgba(173, 173, 173, 0.8);
 	border-radius: 50%;
-	border: 2px solid rgba(0, 0, 0, 0.4);
-	border-top-color: #fff;
-	animation: spinner2 600ms linear infinite;
+	border: 1px solid #cbcccbad;
+	opacity: 1;
+	-webkit-animation: spinner4 800ms linear infinite;
+	animation: spinner4 800ms linear infinite;
 }
-@keyframes spinner2 {
+@keyframes spinner4 {
 	to {
-		transform: rotate(360deg);
+		transform: scale(1.5);
+		opacity: 0;
 	}
 }
 
 .catgr-hero-icn-list {
 	top: 6px;
+}
+
+.fixed-footer {
+	.brand-footer {
+		-webkit-transition: width .35s;
+		transition: all 0.35s;
+	}
+}
+
+.line-height-header {
+	line-height: 64px;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+#category-navigation::-webkit-scrollbar {
+	display: none;
+}
+#category-navigation {
+	overflow: -moz-scrollbars-none;
+}
+
+/* Hide scrollbar for IE and Edge */
+#category-navigation {
+	-ms-overflow-style: none;
 }
