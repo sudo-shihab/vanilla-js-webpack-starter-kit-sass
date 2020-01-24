@@ -6,7 +6,14 @@ if (process.env.NODE_ENV === 'production') {
 			require('tailwindcss'),
 			require('autoprefixer'),
 			purgecss({
-				content: [ './src/**/*.html' ]
+				content: [
+					'./src/**/*.html',
+					'./src/**/*.vue',
+					'./src/**/*.jsx'
+					// etc.
+				],
+				// Include any special characters you're using in this regular expression
+				defaultExtractor: (content) => content.match(/[\w-/:]+(?<!:)/g) || []
 			})
 		]
 	};

@@ -7,6 +7,7 @@
 //@import "~bootstrap/scss/bootstrap";
 
 /* purgecss start ignore */
+
 @tailwind base;
 @tailwind components;
 /* purgecss end ignore */
@@ -14,6 +15,7 @@
 @tailwind utilities;
 
 // your app css starts here
+@import './animation.scss';
 $body-primary-color: #f8f8f8;
 
 /* playfair-display-regular - latin */
@@ -60,24 +62,6 @@ body {
 	color: #18191b;
 }
 
-@keyframes slideleft {
-	from {
-		-webkit-transform: translate3d(-100%, 0, 0);
-		transform: translate3d(-100%, 0, 0);
-		visibility: visible;
-	}
-
-	to {
-		-webkit-transform: translate3d(0, 0, 0);
-		transform: translate3d(0, 0, 0);
-	}
-}
-
-.slideleft {
-	-webkit-animation-name: slideleft;
-	animation-name: slideInLeft;
-}
-
 #logo {
 	background: url(../../images/svg/logo.svg) no-repeat center center;
 	background-size: 30px auto;
@@ -110,7 +94,7 @@ body {
 main {
 	padding: 65px 65px 20px 65px;
 	.main-content {
-		padding: 0px 65px 20px 65px;
+		padding: 0px 0px 20px 65px;
 	}
 }
 
@@ -216,7 +200,7 @@ main {
 	}
 }
 
-button.loader {
+div.loader {
 	height: 80px;
 	width: 80px;
 	background: rgba(173, 173, 173, 0.8);
@@ -232,7 +216,6 @@ button.loader {
 		opacity: 0;
 	}
 }
-
 .catgr-hero-icn-list {
 	top: 6px;
 }

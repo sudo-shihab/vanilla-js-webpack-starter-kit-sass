@@ -79,6 +79,8 @@ image minimization loader used for minimizing static images if any.
 
 added a conditional polyfill structure;
 
+added https://github.com/geoffgraham/animate.scss
+
 finally miniize html
 new HtmlWebpackPlugin({
 			template: './src/index.html',

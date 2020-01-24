@@ -1,8 +1,7 @@
-import './mainShimmer.scss';
-import templateString from './mainShimmer.html';
+import templateString from './content-grid-layout.html';
 import mustache from 'mustache';
 
-export default class mainShimmer {
+export default class contentGridLayout {
 	constructor() {
 		this.shimmerInjectableDiv = document.querySelector('#card-shimmer-collection');
 	}

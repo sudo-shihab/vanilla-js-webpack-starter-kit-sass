@@ -1,0 +1,30 @@
+#main-layout-shimmer-colllection {
+	.br {
+		border-radius: 8px;
+	}
+
+	.shimmer-wrapper {
+		height: inherit;
+		animation: zoomIn 0.3s ease-in;
+	}
+
+	.shimmer {
+		margin: 0 3px;
+		background: #eee;
+		border-radius: 1px;
+		-webkit-box-shadow: 0 1rem 2rem 0 rgba(255, 255, 255, 0.35);
+		box-shadow: 0 1rem 2rem 0 rgba(255, 255, 255, 0.35);
+		overflow: hidden;
+		background: #f1f4f7;
+	}
+
+	.shimmer_nrml_crd {
+		margin: 0 15px 0 0;
+	}
+
+	.animate {
+		animation: shimmer 1.5s infinite linear;
+		background: linear-gradient(to right, #f1f4f7 4%, #eee 25%, #eff1f3 36%);
+		background-size: 1500px 100%;
+	}
+}

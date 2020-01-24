@@ -7,13 +7,14 @@ import lazyLoadInit from './scripts/lazyLoadConfig';
 
 lazyLoadInit();
 
-Promise.all(polyfills)
-	.then(() => {
-		window.addEventListener('load', (event) => {
-			console.log('document ready to init app');
+window.addEventListener('load', (event) => {
+	console.log('document ready to init app');
+	Promise.all(polyfills)
+		.then((polyfillResPromiseObj) => {
+			console.log('polyfills added', polyfillResPromiseObj);
 			app.init();
+		})
+		.catch((error) => {
+			console.error('Failed fetching polyfills', error);
 		});
-	})
-	.catch((error) => {
-		console.error('Failed fetching polyfills', error);
-	});
+});

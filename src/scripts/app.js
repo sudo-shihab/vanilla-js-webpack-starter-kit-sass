@@ -1,17 +1,26 @@
 import '../styles/scss/index.scss';
+
 import sideNavComponent from '../components/app-shell/sideNav';
 import mainShimmerComponent from '../components/common/mainShimmer';
+import mainCardGridLayoutComponent from '../components/common/content-grid-layout/contentGridLayout';
 
 export const app = {
 	init() {
 		this.mainLoader = document.querySelector('.loader-section');
 		this.mainShimmerDiv = document.querySelector('.shimmers');
+		this.bodyDom = document.querySelector('body');
 		this.hideMainLoader();
 	},
 
 	hideMainLoader() {
-		this.mainLoader.style.display = 'none';
-		this.showMainShimmer();
+		setTimeout(() => {
+			console.log(
+				'hiding the loader, should call the API to retreive the data or you can intiate the routes, inside which u can call the api'
+			);
+			this.mainLoader.style.display = 'none';
+			// this.mainLoader.classList.toggle('hidden')
+			this.showMainShimmer();
+		}, 500);
 	},
 
 	initCatgrySidebar() {
@@ -23,6 +32,11 @@ export const app = {
 
 	showMainShimmer() {
 		new mainShimmerComponent().render();
+		// call the api, for morphing used settimeout
+		setTimeout(() => {
+			this.bodyDom.classList.toggle('overflow-y-hidden');
+			new mainCardGridLayoutComponent().render();
+		}, 2000);
 		this.initCatgrySidebar();
 	}
 };
