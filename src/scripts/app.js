@@ -1,12 +1,12 @@
 import '../styles/scss/index.scss';
 import sideNavComponent from '../components/app-shell/sideNav';
+import mainShimmerComponent from '../components/common/mainShimmer';
 
 export const app = {
 	init() {
 		this.mainLoader = document.querySelector('.loader-section');
 		this.mainShimmerDiv = document.querySelector('.shimmers');
-
-		this.initCatgrySidebar();
+		this.hideMainLoader();
 	},
 
 	hideMainLoader() {
@@ -18,11 +18,11 @@ export const app = {
 		setTimeout(() => {
 			console.log('enabling the sidebar');
 			new sideNavComponent().render();
-			this.hideMainLoader();
-		}, 2000);
+		}, 1000);
 	},
 
 	showMainShimmer() {
-		this.mainShimmerDiv.innerHTML = '<h3>Shimmers Injected </h3>';
+		new mainShimmerComponent().render();
+		this.initCatgrySidebar();
 	}
 };

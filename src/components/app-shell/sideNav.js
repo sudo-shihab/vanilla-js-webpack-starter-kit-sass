@@ -1,4 +1,4 @@
-import template from './sideNav.html';
+import templateString from './sideNav.html';
 import Mustache from 'mustache';
 
 export default class SideNavigation {
@@ -8,6 +8,6 @@ export default class SideNavigation {
 
 	render() {
 		// Add our component to the body
-		this.sideNavBar.innerHTML = Mustache.render(template);
+		this.sideNavBar.innerHTML = Mustache.render(templateString);
 	}
 }

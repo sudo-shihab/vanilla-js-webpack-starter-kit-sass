@@ -177,6 +177,7 @@ https://survivejs.com/webpack/loading/fonts/
 https://google-webfonts-helper.herokuapp.com/
 https://github.com/typekit/webfontloader
 https://github.com/bramstein/fontfaceobserver
+https://wp-rocket.me/blog/guide-web-font-optimization/
 
 // best =---> https://www.youtube.com/watch?v=s-G1m23Emlk
 	https://github.com/chhib/dt-font-loading
