@@ -29,5 +29,11 @@ const createLazyLoadInstance = () => {
 };
 
 export default () => {
-	document.addEventListener('DOMContentLoaded', createLazyLoadInstance);
+	return createLazyLoadInstance();
 };
+
+// how to use is below
+/**
+ * import lazyLoadInstance from '../../../lazyLoadConfig';
+ * 	lazyLoadInstance().update();
+ */
