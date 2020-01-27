@@ -10,4 +10,8 @@ export default class SideNavigation {
 		// Add our component to the body
 		this.sideNavBar.innerHTML = Mustache.render(templateString);
 	}
+
+	hide() {
+		this.sideNavBar.style.display = 'none';
+	}
 }

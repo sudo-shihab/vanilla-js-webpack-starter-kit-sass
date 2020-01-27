@@ -1,14 +1,15 @@
 import '../styles/scss/index.scss';
-
 import sideNavComponent from '../components/app-shell/sideNav';
-import mainShimmerComponent from '../components/common/mainShimmer';
+import mainShimmerComponent from '../components/common/commonshimmer';
 import mainCardGridLayoutComponent from '../components/common/content-grid-layout/contentGridLayout';
+import router from './router';
 
 export const app = {
 	init() {
 		this.mainLoader = document.querySelector('.loader-section');
 		this.mainShimmerDiv = document.querySelector('.shimmers');
 		this.bodyDom = document.querySelector('body');
+		router.initRouterConfig();
 		this.hideMainLoader();
 	},
 
@@ -17,7 +18,6 @@ export const app = {
 			console.log(
 				'hiding the loader, should call the API to retreive the data or you can intiate the routes, inside which u can call the api'
 			);
-
 			// this.mainLoader.classList.toggle('hidden')
 			this.showMainShimmer();
 			this.mainLoader.style.display = 'none';

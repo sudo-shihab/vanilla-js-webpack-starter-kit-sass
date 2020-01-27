@@ -15,7 +15,7 @@
 @tailwind utilities;
 
 // your app css starts here
-@import './animation.scss';
+
 $body-primary-color: #f8f8f8;
 
 /* playfair-display-regular - latin */
@@ -61,6 +61,8 @@ body {
 	-webkit-font-smoothing: antialiased;
 	color: #18191b;
 }
+
+@import './animation.scss';
 
 #logo {
 	background: url(../../images/svg/logo.svg) no-repeat center center;

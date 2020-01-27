@@ -1,5 +1,5 @@
-import './mainShimmer.scss';
-import templateString from './mainShimmer.html';
+import './commonShimmer.scss';
+import templateString from './commonShimmer.html';
 import mustache from 'mustache';
 
 export default class mainShimmer {
@@ -8,5 +8,11 @@ export default class mainShimmer {
 	}
 	render() {
 		this.shimmerInjectableDiv.innerHTML = mustache.render(templateString);
+	}
+	hide() {
+		this.shimmerInjectableDiv.style.display = 'none';
+	}
+	show() {
+		this.shimmerInjectableDiv.style.display = 'block';
 	}
 }

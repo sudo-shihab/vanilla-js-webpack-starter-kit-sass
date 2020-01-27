@@ -2,9 +2,10 @@
 require('./myfont.font.js');
 import polyfills from './polyfills';
 
-import { app } from './scripts/app';
-import lazyLoadInit from './scripts/lazyLoadConfig';
+import lazyLoadInit from './lazyLoadConfig';
+import { app } from './app/main';
 
+// initialize the lazyload plugin before onload event
 lazyLoadInit();
 
 window.addEventListener('load', (event) => {
