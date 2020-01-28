@@ -5,7 +5,6 @@
 
 	.shimmer-wrapper {
 		height: inherit;
-		animation: zoomIn 0.3s ease-in;
 	}
 
 	.shimmer {
@@ -15,11 +14,5 @@
 		box-shadow: 0 1rem 2rem 0 rgba(255, 255, 255, 0.35);
 		overflow: hidden;
 		background: #eee;
-	}
-
-	.animate {
-		animation: shimmer 1.5s infinite linear;
-		background: linear-gradient(to right, #f1f4f7 4%, #eee 25%, #eff1f3 36%);
-		background-size: 1500px 100%;
 	}
 }

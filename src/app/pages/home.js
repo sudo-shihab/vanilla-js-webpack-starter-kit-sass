@@ -1,8 +1,9 @@
-import appShellModule from '../modules/appShell';
+import HomePageModule from '../modules/home';
 
+// needs refactoring
 export default {
 	init() {
 		console.log('home page initiated');
-		appShellModule.initCommonShimmerCmpnt();
+		HomePageModule.renderGridComponent();
 	}
 };

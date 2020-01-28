@@ -1,9 +1,9 @@
-import appShellModule from '../modules/appShell';
+import NuxtJsModule from '../modules/nuxtjs';
 
 export default {
 	init() {
 		console.log('welcome to nuxtjs page');
-		appShellModule.initCommonShimmerCmpnt();
+		NuxtJsModule.renderGridComponent();
 		// call the api
 	}
 };

@@ -11,7 +11,7 @@ window.addEventListener('load', (event) => {
 	Promise.all(polyfills)
 		.then((polyfillResPromiseObj) => {
 			console.log('polyfills added are', polyfillResPromiseObj);
-			app.init();
+			app.run();
 		})
 		.catch((error) => {
 			console.error('Failed fetching polyfills', error);

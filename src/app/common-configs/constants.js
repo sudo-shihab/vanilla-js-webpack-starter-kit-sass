@@ -1,0 +1,15 @@
+export const APP_ROUTE_NAMES = {};
+
+export const ROUTE_NOUNS = {
+	HOME_FEEDS: 'home',
+	VUE_FEEDS: 'vue',
+	NUXT_FEEDS: 'nuxt',
+	GRIDSOME_FEEDS: 'gridsome'
+};
+
+export const FORCE_ROUTES = {
+	HOME_PAGE: `/#/${ROUTE_NOUNS.HOME_FEEDS}`,
+	VUE_PAGE: `/#/${ROUTE_NOUNS.VUE_FEEDS}`,
+	NUXT_PAGE: `/#/${ROUTE_NOUNS.NUXT_FEEDS}`,
+	GRIDSOME_PAGE: `/#/${ROUTE_NOUNS.GRIDSOME_FEEDS}`
+};

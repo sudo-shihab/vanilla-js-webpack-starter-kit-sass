@@ -3,10 +3,8 @@ import sideNavComponent from '../components/app-shell/sideNav';
 
 export default {
 	showMainLoaderDiv() {
-		setTimeout(() => {
-			// this.mainLoader = document.querySelector('.loader-section');
-			document.querySelector('.loader-section').style.display = 'block';
-		}, 500);
+		// this.mainLoader = document.querySelector('.loader-section');
+		document.querySelector('.loader-section').style.display = 'block';
 	},
 
 	hideMainLoaderDiv() {
@@ -27,13 +25,15 @@ export default {
 	},
 
 	initCatgrySidebarCmpnt() {
-		setTimeout(() => {
-			console.log('enabling the sidebar');
-			new sideNavComponent().render();
-		}, 1000);
+		console.log('enabling the sidebar');
+		new sideNavComponent().render();
 	},
 
 	hideCatgrySidebarDiv() {
 		new sideNavComponent().hide();
+	},
+
+	emptyMainContentDiv() {
+		document.querySelector('#main-content-area').innerHTML = '';
 	}
 };
