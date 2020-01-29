@@ -1,5 +1,5 @@
-import mainShimmerComponent from '../components/common/commonshimmer';
-import sideNavComponent from '../components/app-shell/sideNav';
+import mainShimmerComponent from '../components/page-load-shimmer/shimmer';
+import sideNavComponent from '../components/side-nav/sideNav';
 
 export default {
 	showMainLoaderDiv() {

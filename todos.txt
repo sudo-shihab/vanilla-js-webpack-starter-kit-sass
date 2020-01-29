@@ -428,3 +428,9 @@ npm install chai
 
 ===
 https://github.com/numical/script-ext-html-webpack-plugin
+
+
+
+== APP LEVEl ===
+
+Components should be independent

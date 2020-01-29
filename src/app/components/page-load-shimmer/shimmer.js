@@ -1,5 +1,5 @@
-import './commonShimmer.scss';
-import templateString from './commonShimmer.html';
+import './shimmer.scss';
+import templateString from './shimmer.html';
 import mustache from 'mustache';
 
 export default class mainShimmer {
