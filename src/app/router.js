@@ -1,5 +1,5 @@
 import Navigo from 'navigo';
-import { ROUTE_NOUNS } from './common-configs/Constants';
+import { ROUTE_NOUNS } from './common-configs/constants';
 import homePageExe from './pages/home';
 import vuejsPageExe from './pages/vue';
 import nuxtjsPageExe from './pages/nuxt';
