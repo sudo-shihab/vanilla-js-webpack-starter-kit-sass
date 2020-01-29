@@ -91,7 +91,7 @@ module.exports = merge(webpackCommon, {
 			canPrint: true
 		}),
 		new CleanWebpackPlugin(),
-		new BundleAnalyzerPlugin(),
+		//new BundleAnalyzerPlugin(),
 		new HtmlWebpackPlugin({
 			template: './src/index.html',
 			minify: {

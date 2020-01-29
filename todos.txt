@@ -98,6 +98,8 @@ AFTER ADDING BABEL-loADER , Babel-polyfill we saw a huge icreasse in the file si
 
 Try to add Babel 7 into webpack instaed of current babel6 , with new plugin like - Proposal Optional Chaining
 
+Try to add http2.0 for strong multiplexing request and response
+
 Also Axios Http CLient lib is taking too much of size , may find an alternative to this.
 see if u can enable gzip, brotil encoding compression using webpack dev-server or create a node server which supportr gzip (done)
 	"dev": "webpack-dev-server --config webpack.dev.js --compress true --open",

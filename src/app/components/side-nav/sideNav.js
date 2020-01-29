@@ -1,6 +1,6 @@
 import templateString from './sideNav.html';
 import Mustache from 'mustache';
-import { FORCE_ROUTES } from '../../common-configs/constants';
+import { FORCE_ROUTES } from '../../common-configs/Constants';
 
 export default class SideNavigation {
 	constructor() {
