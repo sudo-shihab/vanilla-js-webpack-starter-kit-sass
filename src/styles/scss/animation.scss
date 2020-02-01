@@ -87,3 +87,36 @@
 	-webkit-animation-name: fadeInUp;
 	animation-name: fadeInUp;
 }
+
+@-webkit-keyframes fadeOut {
+	from {
+		opacity: 1;
+	}
+
+	to {
+		opacity: 0;
+	}
+}
+
+@keyframes fadeOut {
+	from {
+		opacity: 1;
+	}
+
+	to {
+		opacity: 0;
+	}
+}
+
+.fadeOut {
+	-webkit-animation-name: fadeOut;
+	animation-name: fadeOut;
+}
+
+.apply_zoomIn {
+	animation: zoomIn 0.3s ease-in;
+}
+
+.apply_fadeOutDown {
+	animation: fadeOut 0.3s ease-in-out;
+}

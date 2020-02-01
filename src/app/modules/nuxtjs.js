@@ -1,8 +1,8 @@
-import NuxtJsFeedsGridLayout from '../components/nuxtjsFeeds/grid-layout/gridLayout';
+import CommonDataGridCmpnt from '../components/grid-layout/gridLayout';
 
 export default {
 	init() {},
-	renderGridComponent() {
-		new NuxtJsFeedsGridLayout().render();
+	renderDataGrid() {
+		new CommonDataGridCmpnt().render();
 	}
 };

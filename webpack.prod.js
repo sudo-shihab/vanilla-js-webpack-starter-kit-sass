@@ -56,7 +56,11 @@ module.exports = merge(webpackCommon, {
 	},*/
 	optimization: {
 		minimize: true,
-		minimizer: [ new TerserPlugin() ],
+		minimizer: [
+			new TerserPlugin({
+				sourceMap: true
+			})
+		],
 		splitChunks: {
 			chunks: 'all',
 			maxInitialRequests: Infinity,
@@ -91,7 +95,7 @@ module.exports = merge(webpackCommon, {
 			canPrint: true
 		}),
 		new CleanWebpackPlugin(),
-		//new BundleAnalyzerPlugin(),
+		new BundleAnalyzerPlugin(),
 		new HtmlWebpackPlugin({
 			template: './src/index.html',
 			minify: {
@@ -104,6 +108,10 @@ module.exports = merge(webpackCommon, {
 		new PreloadWebpackPlugin({
 			rel: 'preload',
 			include: 'initial' // initial or allchunks
+		}),
+		new PreloadWebpackPlugin({
+			rel: 'prefetch',
+			include: [ 'connectionStatusCmpnt' ] // initial or allchunks
 		}),
 		new CompressionPlugin({
 			filename: '[path].gz[query]',

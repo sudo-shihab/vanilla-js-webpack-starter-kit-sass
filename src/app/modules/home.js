@@ -1,8 +1,8 @@
-import HomePageGridLayout from '../components/homeFeeds/grid-layout/gridLayout';
+import CommonDataGridCmpnt from '../components/grid-layout/gridLayout';
 
 export default {
 	init() {},
-	renderGridComponent() {
-		new HomePageGridLayout().render();
+	renderDataGrid() {
+		new CommonDataGridCmpnt().render();
 	}
 };

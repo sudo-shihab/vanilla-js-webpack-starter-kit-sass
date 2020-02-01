@@ -35,5 +35,17 @@ export default {
 
 	emptyMainContentDiv() {
 		document.querySelector('#main-content-area').innerHTML = '';
+	},
+
+	renderConnectonStatusCmpt(isOffline) {
+		const connctnStatusCmpntObj = import(/* webpackChunkName: 'connectionStatusCmpnt' */ '../components/connectionStatus/connectionStatus').then(
+			(module) => {
+				return new module.default();
+			}
+		);
+
+		connctnStatusCmpntObj.then((module) => {
+			module.render(isOffline);
+		});
 	}
 };

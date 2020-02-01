@@ -100,6 +100,12 @@ Try to add Babel 7 into webpack instaed of current babel6 , with new plugin like
 
 Try to add http2.0 for strong multiplexing request and response
 
+use dynamic import for css and js wer ever required that can bring down your intial bundle load of css and js ;
+//eg :  --->  	import(/* webpackChunkName: 'commonGridlayout' */ './gridLayout.scss');
+
+detect the network connection speed or is it offline to load offline.html instead of inddex.html or load a section inside htl with offline.html component
+
+
 Also Axios Http CLient lib is taking too much of size , may find an alternative to this.
 see if u can enable gzip, brotil encoding compression using webpack dev-server or create a node server which supportr gzip (done)
 	"dev": "webpack-dev-server --config webpack.dev.js --compress true --open",

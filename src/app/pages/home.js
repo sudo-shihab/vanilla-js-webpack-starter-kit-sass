@@ -4,6 +4,6 @@ import HomePageModule from '../modules/home';
 export default {
 	init() {
 		console.log('home page initiated');
-		HomePageModule.renderGridComponent();
+		HomePageModule.renderDataGrid();
 	}
 };

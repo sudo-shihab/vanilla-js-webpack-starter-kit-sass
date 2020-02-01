@@ -20,5 +20,7 @@ export default () => {
 		}
 	);
 
-	return proteusInstance;
+	return httpClient;
 };
+
+// how to use

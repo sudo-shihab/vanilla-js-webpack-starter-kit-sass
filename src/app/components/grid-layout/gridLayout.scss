@@ -1,0 +1,24 @@
+#main-content-area {
+	.br {
+		border-radius: 8px;
+	}
+
+	.grid-wrapper {
+		height: inherit;
+		animation: zoomIn 0.3s ease-in;
+	}
+
+	.grid {
+		margin: 0 3px;
+		background: #d2dcd5;
+		-webkit-box-shadow: 0 1rem 2rem 0 rgba(255, 255, 255, 0.35);
+		box-shadow: 0 1rem 2rem 0 rgba(255, 255, 255, 0.35);
+		overflow: hidden;
+	}
+
+	.animate {
+		animation: grid 1.5s infinite linear;
+		background: linear-gradient(to right, #f1f4f7 4%, #eee 25%, #eff1f3 36%);
+		background-size: 1500px 100%;
+	}
+}

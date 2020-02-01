@@ -2,6 +2,7 @@ const webpackCommon = require('./webpack.common.js');
 const path = require('path');
 const merge = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const PreloadWebpackPlugin = require('preload-webpack-plugin');
 
 module.exports = merge(webpackCommon, {
 	devtool: 'inline-source-map',
@@ -35,6 +36,14 @@ module.exports = merge(webpackCommon, {
 	plugins: [
 		new HtmlWebpackPlugin({
 			template: './src/index.html'
+		}),
+		new PreloadWebpackPlugin({
+			rel: 'preload',
+			include: 'initial' // initial or allchunks
+		}),
+		new PreloadWebpackPlugin({
+			rel: 'prefetch',
+			include: [ 'connectionStatusCmpnt' ] // initial or allchunks
 		})
 	]
 });

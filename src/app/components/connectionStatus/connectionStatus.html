@@ -1,0 +1,14 @@
+<div class=" w-full fixed text-center clearfix px-4" id="offline-cmpnt-wrapper">
+    {{#status}}
+        <div class="container bg-gray-400 m-auto p-2 max-w-xs sm:max-w-lg md:max-w-xl lg:max-w-xl toaster-danger shadow-lg">
+            oops ...&nbsp; offline mode Enabled , please check your internet connection
+        </div>
+    {{/status}}
+
+
+    {{^status}}
+        <div class="container bg-gray-400 m-auto p-2 max-w-xs sm:max-w-lg md:max-w-xl lg:max-w-xl toaster-sucess shadow-lg">
+            Cool .. &nbsp; Network is Back!!
+        </div>
+    {{/status}}
+</div>
